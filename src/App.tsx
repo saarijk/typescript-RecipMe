@@ -8,7 +8,7 @@ function App() {
       <div className="flex-grow bg-gray-20">
         <h1 className="text-primary-500 text-center text-3xl pt-20">Recipe Explorer</h1>
         <br/>
-        <p className="text-center text-md mt-[-20px] mb-10">Insert description here.</p>
+        <p className="text-center text-md mt-[-20px] mb-10">Your perfect recipe is only a search away!</p>
         <Home />
       </div>
     </div>
