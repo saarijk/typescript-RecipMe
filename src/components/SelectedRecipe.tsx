@@ -4,9 +4,13 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 
 interface SelectedRecipeProps {
   selectedRecipe: Meal | null;
+  onClose: () => void; // prop to hand closing
 }
 
-const SelectedRecipe: React.FC<SelectedRecipeProps> = ({ selectedRecipe }) => {
+const SelectedRecipe: React.FC<SelectedRecipeProps> = ({ 
+    selectedRecipe, 
+    onClose 
+  }) => {
   const selectedRecipeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,7 +26,7 @@ const SelectedRecipe: React.FC<SelectedRecipeProps> = ({ selectedRecipe }) => {
     <>
     <div ref={selectedRecipeRef} className="flex flex-col items-center">
     <div className="grid justify-items-end w-5/6 mt-20">
-      <button className="flex items-center py-2 text-black rounded">
+      <button className="flex items-center py-2 text-black rounded" onClick={onClose}>
         <XMarkIcon className="w-7 h-7" />
       </button>
     </div>
