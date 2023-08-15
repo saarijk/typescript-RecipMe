@@ -3,47 +3,51 @@
 @tailwind components;
 @tailwind utilities;
 
-html, 
+html,
 body,
 #root,
 .app {
-   height: 100%;
-   width: 100%;
-   font-family: 'DM Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .recipe-list {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
- }
- 
- .recipe-card {
-   width: 200px;
-   height: 200px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-bottom: 20px;
-   background-color: #EFE6E6;
-   border:1px solid transparent;
-   border-radius: 10px;
-   word-wrap:break-word;
-   overflow-wrap:break-word;
- }
- 
- .recipe-image {
-   width: 60%;
-   height: auto;
-   padding:10px;
-   margin-top:20px;
- }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
- .recipe-card:hover {
-  border:1px solid #FF6B66;
+.recipe-card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff6f6;
+  border: 1px solid #d3cbcb;
+  border-radius: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.recipe-image {
+  width: 60%;
+  height: auto;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.recipe-card:hover {
+  border: 1px solid #FF6B66;
   box-shadow: 2px 2px 8px #750d09;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
- }
+}
+
+.text-shadow-strong {
+  text-shadow: 6px 6px 5px rgba(95, 95, 95, 0.5);
+}
