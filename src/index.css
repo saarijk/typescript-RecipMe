@@ -30,6 +30,7 @@ body,
   border-radius: 10px;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  /*flex-wrap: nowrap;*/
 }
 
 .recipe-image {

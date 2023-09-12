@@ -102,7 +102,7 @@ export default function Home() {
       )}
         <motion.h1 
           ref={foundRecipesRef} 
-          className="text-primary-500 text-center text-[120px] pt-20 font-dancing text-shadow-strong"
+          className="text-primary-500 text-center text-[120px] pt-20 font-dancing text-shadow-strong max-xs:text-[80px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once:true, amount:1}}
@@ -115,7 +115,7 @@ export default function Home() {
           RecipMe
         </motion.h1>
         <motion.h1 
-          className="text-black text-center text-3xl pt-20 mb-[100px] mt-[-100px] font-montserrat drop-shadow-md"
+          className="text-black text-center text-3xl pt-20 mb-[100px] mt-[-100px] font-montserrat drop-shadow-md max-xs:text-lg"
           initial="hidden"
           whileInView="visible"
           viewport={{ once:true, amount:1}}
@@ -129,7 +129,7 @@ export default function Home() {
         </motion.h1>
         
           <div className="flex justify-center">
-          <div className="recipe-list w-5/6 flex flex-wrap justify-center gap-8">
+          <div className="recipe-list w-5/6 flex items-center gap-8 max-xs:w-1/2 max-xs:ml-[0%]">
             <AnimatePresence>
               {allMeals.meals.map((meal, index) => (
                 <motion.div
@@ -174,16 +174,16 @@ export default function Home() {
             visible: {opacity: 1}
           }}
         >
-          <p className="text-4xl text-primary-500 mt-[25px] font-dancing mb-2">Didn't find what you're looking for?<br/></p>
+          <p className="text-4xl text-primary-500 mt-[25px] text-center font-dancing mb-2 max-xs:text-3xl">Didn't find what you're looking for?<br/></p>
           <p className="mb-[25px] font-montserrat">Try searching for a recipe below!</p>
         <input
             type="text"
             id="recipes"
-            className="bg-gray-50 border border-primary-300 text-black text-sm rounded-lg focus:outline-none focus:border-primary-500 block w-1/3 p-2.5 font-montserrat"
+            className="bg-gray-50 border border-primary-300 text-black text-sm rounded-lg focus:outline-none focus:border-primary-500 block w-1/3 p-2.5 font-montserrat max-xs:w-5/6"
             style={{ boxShadow: 'none' }}
             onChange={(inputTerm) => setInput(inputTerm.target.value)}
           />
-          <button className="bg-primary-500 text-white rounded-md p-2 mt-3 hover:bg-primary-300 font-montserrat"
+          <button className="bg-primary-500 text-white rounded-md p-2 mt-3 hover:bg-primary-300 font-montserrat max-xs:text-[15px]"
           onClick={() => {
             const userInput = (
               document.getElementById("recipes") as HTMLInputElement
